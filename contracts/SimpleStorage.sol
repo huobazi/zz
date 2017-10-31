@@ -7,8 +7,8 @@ contract SimpleStorage{
         storedData = initVal;
     }
 
-    function set(uint m){
-       storedData = m;
+    function set(uint newVal){
+       storedData = newVal;
     }
 
     function get() constant returns(uint retVal){
