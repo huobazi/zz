@@ -14,8 +14,8 @@ contract Greeter{
         return greeting;
     }
 
-    function setGreeting(string _newGreeting){
-        greeting = _newGreeting;
+    function setGreeting(string _newgreeting){
+        greeting = _newgreeting;
     }
 
     function kill(){
@@ -23,6 +23,4 @@ contract Greeter{
             suicide(creator);
         }
     }
-
-
 }
