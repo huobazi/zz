@@ -14,7 +14,7 @@ contract Greeter{
         return greeting;
     }
 
-    functionsetGreeting(string _newGreeting){
+    function setGreeting(string _newGreeting){
         greeting = _newGreeting;
     }
 
