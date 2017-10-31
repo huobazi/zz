@@ -1,9 +1,11 @@
 # ZZ
-This is a quore && truffle demo project
+This is a quorum && truffle/solidity demo project
 
 ## Usage
 
-see https://github.com/jpmorganchase/quorum-examples
+### First
+
+see also: https://github.com/jpmorganchase/quorum-examples
 
 ```
 git clone https://github.com/jpmorganchase/quorum-examples
@@ -20,6 +22,8 @@ init.sh
 start.sh
 
 ```
+
+### Second
 
 ```
 truffle compile
