@@ -3,7 +3,7 @@ This is a quorum && truffle/solidity demo project
 
 ## Usage
 
-### First
+### Step1
 
 see also: https://github.com/jpmorganchase/quorum-examples
 
@@ -23,7 +23,7 @@ start.sh
 
 ```
 
-### Second
+### Step2
 
 ```
 truffle compile
