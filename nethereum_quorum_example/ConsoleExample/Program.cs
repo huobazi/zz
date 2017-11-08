@@ -15,7 +15,6 @@ namespace ConsoleExample
             Run();
             Console.ReadLine();
         }
-        
 
         private static async void Run()
         {

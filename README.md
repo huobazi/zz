@@ -40,12 +40,9 @@ truffle migrate
 truffle console
 ```
 
-<<<<<<< HEAD
 ### Step3
 
 ```
 cd nethereum_quorum_example/ConsoleExample
 dotnet run
 ```
-=======
->>>>>>> 37388cfc1b99b08366cdfab1fb18d66a101fd922
