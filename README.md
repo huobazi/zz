@@ -1,5 +1,5 @@
 # ZZ
-This is a quorum && truffle/solidity demo project
+This is a quorum && truffle/solidity && nethereum  demo project
 
 ## Usage
 
