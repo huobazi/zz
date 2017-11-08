@@ -11,7 +11,7 @@ see also: https://github.com/jpmorganchase/quorum-examples
 git clone https://github.com/jpmorganchase/quorum-examples
 ```
 
-then change the network config to 
+then change the VM's network config to 
 
 ```
 config.vm.network "public_network", ip: "10.11.12.88", bridge: "en1: Wi-Fi (AirPort)"
@@ -39,3 +39,4 @@ truffle compile
 truffle migrate
 truffle console
 ```
+
