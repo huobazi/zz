@@ -1,5 +1,9 @@
 qdata
 .vagrant
 *.log
+*.vs
 build/
 builds/
+bin/
+obj/
+
