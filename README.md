@@ -39,3 +39,10 @@ truffle compile
 truffle migrate
 truffle console
 ```
+
+### Step3
+
+```
+cd nethereum_quorum_example/ConsoleExample
+dotnet run
+```
