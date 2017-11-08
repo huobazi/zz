@@ -11,7 +11,7 @@ see also: https://github.com/jpmorganchase/quorum-examples
 git clone https://github.com/jpmorganchase/quorum-examples
 ```
 
-then change the network config to 
+then change the VM's network config to 
 
 ```
 config.vm.network "public_network", ip: "10.11.12.88", bridge: "en1: Wi-Fi (AirPort)"
@@ -40,9 +40,12 @@ truffle migrate
 truffle console
 ```
 
+<<<<<<< HEAD
 ### Step3
 
 ```
 cd nethereum_quorum_example/ConsoleExample
 dotnet run
 ```
+=======
+>>>>>>> 37388cfc1b99b08366cdfab1fb18d66a101fd922
