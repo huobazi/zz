@@ -40,7 +40,7 @@ namespace ConsoleExample
             var privateFor = new List<string>(new[] { "ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc=" });
             web3Node1.SetPrivateRequestParameters(privateFor);
             //send transaction
-            var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, 4));
+            var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, 65));
 
             var node1Value = await GetValue(abi, address, urlNode1);
             Console.WriteLine(node1Value);
