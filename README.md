@@ -37,7 +37,6 @@ start.sh
 cd truffle_example
 truffle compile
 truffle migrate
-truffle console
 ```
 
 ### Step3
