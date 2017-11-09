@@ -13,7 +13,7 @@ namespace ConsoleExample
         {
 
             QuorumChainRpcTests.Run();
-            //QuorumPrivateContractTests.Run();
+            QuorumPrivateContractTests.Run();
 
             Console.ReadLine();
         }
