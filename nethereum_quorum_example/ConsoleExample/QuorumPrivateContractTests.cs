@@ -22,9 +22,9 @@ namespace ConsoleExample
             var node1Port = "22000";
             var node2Port = "22001";
             var node7Port = "22006";
-            var urlNode1 = ipAddress + ":" + node1Port;
-            var urlNode2 = ipAddress + ":" + node2Port;
-            var urlNode7 = ipAddress + ":" + node7Port;
+            var urlNode1  = ipAddress + ":" + node1Port;
+            var urlNode2  = ipAddress + ":" + node2Port;
+            var urlNode7  = ipAddress + ":" + node7Port;
 
             var address = "0x1932c48b2bf8102ba33b4a6b545c32236e342f34";
             var abi = "[{ 'constant':true,'inputs':[],'name':'storedData','outputs':[{'name':'','type':'uint256'}],'payable':false,'type':'function'},{'constant':false,'inputs':[{'name':'newVal','type':'uint256'}],'name':'set','outputs':[],'payable':false,'type':'function'},{'constant':true,'inputs':[],'name':'get','outputs':[{'name':'retVal','type':'uint256'}],'payable':false,'type':'function'},{'inputs':[{'name':'initVal','type':'uint256'}],'type':'constructor'}]";
@@ -75,8 +75,8 @@ namespace ConsoleExample
         private static async Task<int> GetValue(string abi, string address, string nodeUrl)
         {
             //normal geth is ok
-            var web3 = new Web3(nodeUrl);
-            var contract = web3.Eth.GetContract(abi, address);
+            var web3        = new Web3(nodeUrl);
+            var contract    = web3.Eth.GetContract(abi, address);
             var functionGet = contract.GetFunction("get");
             return await functionGet.CallAsync<int>();
         }
