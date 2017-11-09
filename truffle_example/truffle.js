@@ -5,12 +5,12 @@ module.exports = {
             port: 22000,
             network_id: "*", // Match any network id
         },
-        node4: {
+        nodefour: {
             host: "localhost",
             port: 22003, // as voter,
             network_id: "*", // Match any network id
         },
-        node7: {
+        nodeseven: {
             host: "localhost",
             port: 22006,
             network_id: "*", // Match any network id
