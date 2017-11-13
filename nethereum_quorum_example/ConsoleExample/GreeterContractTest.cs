@@ -11,7 +11,6 @@ namespace ConsoleExample
 {
     public sealed class GreeterContractTest
     {
-
         /// <summary>
         /// Runs this instance.
         /// </summary>
@@ -20,7 +19,7 @@ namespace ConsoleExample
 
             var ipAddress = DefaultSettings.QuorumIPAddress;
             var node1Port = "22000";
-            var node2Port = "22001";
+            var node2Port = "22003";
             var node7Port = "22006";
             var urlNode1 = ipAddress + ":" + node1Port;
             var urlNode2 = ipAddress + ":" + node2Port;
@@ -82,8 +81,8 @@ namespace ConsoleExample
         private static async Task<string> GetValue(string abi, string address, string nodeUrl)
         {
             //normal geth is ok
-            var web3 = new Web3(nodeUrl);
-            var contract = web3.Eth.GetContract(abi, address);
+            var web3        = new Web3(nodeUrl);
+            var contract    = web3.Eth.GetContract(abi, address);
             var functionGet = contract.GetFunction("greet");
             return await functionGet.CallAsync<string>();
         }
