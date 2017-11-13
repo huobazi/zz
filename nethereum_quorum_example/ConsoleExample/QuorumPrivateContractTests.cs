@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Nethereum.Hex.HexTypes;
 using Nethereum.Quorum;
 using Nethereum.RPC.TransactionReceipts;
 using Nethereum.Web3;
@@ -26,8 +27,10 @@ namespace ConsoleExample
             var urlNode2  = ipAddress + ":" + node2Port;
             var urlNode7  = ipAddress + ":" + node7Port;
 
-            var address = "0x1932c48b2bf8102ba33b4a6b545c32236e342f34";
-            var abi = "[{ 'constant':true,'inputs':[],'name':'storedData','outputs':[{'name':'','type':'uint256'}],'payable':false,'type':'function'},{'constant':false,'inputs':[{'name':'newVal','type':'uint256'}],'name':'set','outputs':[],'payable':false,'type':'function'},{'constant':true,'inputs':[],'name':'get','outputs':[{'name':'retVal','type':'uint256'}],'payable':false,'type':'function'},{'inputs':[{'name':'initVal','type':'uint256'}],'type':'constructor'}]";
+            //var address = "0x1932c48b2bf8102ba33b4a6b545c32236e342f34";
+            var address = "0xed9d02e382b34818e88b88a309c7fe71e65f419d";
+            
+            var abi = "[{ 'constant':true,'inputs':[],'name':'storedData','outputs':[{'name':'','type':'uint256'}],'payable':false,'type':'function'},{'constant':false,'inputs':[{'name':'x','type':'uint256'}],'name':'set','outputs':[],'payable':false,'type':'function'},{'constant':true,'inputs':[],'name':'get','outputs':[{'name':'retVal','type':'uint256'}],'payable':false,'type':'function'},{'inputs':[{'name':'initVal','type':'uint256'}],'type':'constructor'}]";
 
 
             var web3Node1          = new Web3Quorum(urlNode1);
@@ -39,28 +42,34 @@ namespace ConsoleExample
             //set the private for
             var privateFor = new List<string>(new[] { "ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc=" });
             web3Node1.SetPrivateRequestParameters(privateFor);
+
             //send transaction
-            var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, 65));
+            var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account,new HexBigInteger(210000),new HexBigInteger(42), 42));
 
             var node1Value = await GetValue(abi, address, urlNode1);
+            Console.WriteLine("node1Value:");
             Console.WriteLine(node1Value);
 
             var node2Value = await GetValue(abi, address, urlNode2);
+            Console.WriteLine("node2Value:");
             Console.WriteLine(node2Value);
 
             var node7Value = await GetValue(abi, address, urlNode7);
+            Console.WriteLine("node7Value:");
             Console.WriteLine(node7Value);
 
-            txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, 4));
+            txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, new HexBigInteger(210000), new HexBigInteger(1024), 1024));
 
-            //node1
             node1Value = await GetValue(abi, address, urlNode1);
+            Console.WriteLine("node1Value:");
             Console.WriteLine(node1Value);
 
             node2Value = await GetValue(abi, address, urlNode2);
+            Console.WriteLine("node2Value:");
             Console.WriteLine(node2Value);
 
             node7Value = await GetValue(abi, address, urlNode7);
+            Console.WriteLine("node7Value:");
             Console.WriteLine(node7Value);
 
         }
