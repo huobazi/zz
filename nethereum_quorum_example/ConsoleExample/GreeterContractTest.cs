@@ -26,6 +26,7 @@ namespace ConsoleExample
             var urlNode7  = ipAddress + ":" + node7Port;
 
             var address = "0xed9d02e382b34818e88b88a309c7fe71e65f419d";
+            //string address = "0xca843569e3427144cead5e4d5999a3d0ccf92b8e";
 
             var abi = @"[ { ""constant"": false, ""inputs"": [], ""name"": ""kill"", ""outputs"": [], ""payable"": false, ""type"": ""function"" }, { ""constant"": false, ""inputs"": [ { ""name"": ""_newgreeting"", ""type"": ""string"" } ], ""name"": ""setGreeting"", ""outputs"": [], ""payable"": false, ""type"": ""function"" }, { ""constant"": true, ""inputs"": [], ""name"": ""greet"", ""outputs"": [ { ""name"": """", ""type"": ""string"" } ], ""payable"": false, ""type"": ""function"" }, { ""inputs"": [ { ""name"": ""_greeting"", ""type"": ""string"" } ], ""payable"": false, ""type"": ""constructor"" } ]";
 

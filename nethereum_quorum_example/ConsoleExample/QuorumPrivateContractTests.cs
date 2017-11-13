@@ -28,9 +28,9 @@ namespace ConsoleExample
             var urlNode2  = ipAddress + ":" + node2Port;
             var urlNode7  = ipAddress + ":" + node7Port;
 
-            //var address = "0x1932c48b2bf8102ba33b4a6b545c32236e342f34";
             var address = "0xed9d02e382b34818e88b88a309c7fe71e65f419d";
-            
+            //var address = "0x0638e1574728b6d862dd5d3a3e0942c3be47d996";
+
             var abi = "[{ 'constant':true,'inputs':[],'name':'storedData','outputs':[{'name':'','type':'uint256'}],'payable':false,'type':'function'},{'constant':false,'inputs':[{'name':'x','type':'uint256'}],'name':'set','outputs':[],'payable':false,'type':'function'},{'constant':true,'inputs':[],'name':'get','outputs':[{'name':'retVal','type':'uint256'}],'payable':false,'type':'function'},{'inputs':[{'name':'initVal','type':'uint256'}],'type':'constructor'}]";
 
 
