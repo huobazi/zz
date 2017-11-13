@@ -19,11 +19,11 @@ namespace ConsoleExample
 
             var ipAddress = DefaultSettings.QuorumIPAddress;
             var node1Port = "22000";
-            var node2Port = "22003";
+            var node4Port = "22003";
             var node7Port = "22006";
-            var urlNode1 = ipAddress + ":" + node1Port;
-            var urlNode2 = ipAddress + ":" + node2Port;
-            var urlNode7 = ipAddress + ":" + node7Port;
+            var urlNode1  = ipAddress + ":" + node1Port;
+            var urlNode4  = ipAddress + ":" + node4Port;
+            var urlNode7  = ipAddress + ":" + node7Port;
 
             var address = "0xed9d02e382b34818e88b88a309c7fe71e65f419d";
 
@@ -41,29 +41,29 @@ namespace ConsoleExample
             web3Node1.SetPrivateRequestParameters(privateFor);
 
             //send transaction
-            var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, new HexBigInteger(210000), new HexBigInteger(42), "Hello Quorum!"));
+            var txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, new HexBigInteger(210000), null, "Hello Quorum!"));
 
             var node1Value = await GetValue(abi, address, urlNode1);
             Console.WriteLine("GreeterContractTest node1Value:");
             Console.WriteLine(node1Value);
 
-            var node2Value = await GetValue(abi, address, urlNode2);
-            Console.WriteLine("GreeterContractTest node2Value:");
-            Console.WriteLine(node2Value);
+            var node4Value = await GetValue(abi, address, urlNode4);
+            Console.WriteLine("GreeterContractTest node4Value:");
+            Console.WriteLine(node4Value);
 
             var node7Value = await GetValue(abi, address, urlNode7);
             Console.WriteLine("GreeterContractTest node7Value:");
             Console.WriteLine(node7Value);
 
-            txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, new HexBigInteger(210000), new HexBigInteger(1024), "Hello world!"));
+            txnHash = await transactionService.SendRequestAsync(() => functionSet.SendTransactionAsync(account, new HexBigInteger(210000), null, "Hello world!"));
 
             node1Value = await GetValue(abi, address, urlNode1);
             Console.WriteLine("GreeterContractTest node1Value:");
             Console.WriteLine(node1Value);
 
-            node2Value = await GetValue(abi, address, urlNode2);
-            Console.WriteLine("GreeterContractTest node2Value:");
-            Console.WriteLine(node2Value);
+            node4Value = await GetValue(abi, address, urlNode4);
+            Console.WriteLine("GreeterContractTest node4Value:");
+            Console.WriteLine(node4Value);
 
             node7Value = await GetValue(abi, address, urlNode7);
             Console.WriteLine("GreeterContractTest node7Value:");
