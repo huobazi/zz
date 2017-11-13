@@ -27,8 +27,8 @@ vagrant up
 
 vagrant ssh
 cd quorum-examples/7nodes/
-init.sh
-start.sh
+./init.sh
+./start.sh
 ```
 
 ### Step2
