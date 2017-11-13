@@ -16,7 +16,7 @@ namespace ConsoleExample
             var web3    = new Web3Quorum(DefaultSettings.GetDefaultUrl());
 
             var canonicalHash = await web3.Quorum.CanonicalHash.SendRequestAsync(1);
-            Console.WriteLine("The canonicalHash will is:");
+            Console.WriteLine("The canonicalHash is:");
             Console.WriteLine(canonicalHash);
 
             Console.WriteLine("###########################################");

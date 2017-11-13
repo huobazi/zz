@@ -14,7 +14,9 @@ namespace ConsoleExample
 
             QuorumChainRpcTests.Run();
 
-            QuorumPrivateContractTests.Run();
+            //QuorumPrivateContractTests.Run();
+
+            GreeterContractTest.Run();
 
             Console.ReadLine();
         }
